@@ -5,13 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <!-- Sripts src -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/map.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+
+    <!-- Syncfusion -->
+    <script src="https://cdn.syncfusion.com/ej2/22.1.34/dist/ej2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.1.34/material.css">
     <title>Fleet Maintenance</title>
 </head>
 
 <body>
     <div class="section1">
         <div class="row">
-            <div class="lS_b">
+            <div class="topBar">
+                <div>Total Cars: <span>1041</span></div>
+                <hr>
+                <div>Cars in Quee: <span>14</span></div>
+                <hr>
+                <div>Walk in Cars: <span>2</span></div>
+                <hr>
+                <div>Appointment Cars: <span>07</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div style="box-shadow: none; border: none; padding: 0px; margin: 0px;" class="lS_b boxesMainContainer">
                 <div class="boxesWrap" id="boxesWrap">
                     <!-- <div class="headBox">
                         <span>Waiting</span>
@@ -21,83 +44,102 @@
                         <span>Waiting</span>
                     </div> -->
                 </div>
+                <div class="boxesWrap">
+                    <span style="font-size:6rem;text-align: center;margin: auto 0px;"> = </span>
+                </div>
+                <div class="boxesWrap" id="boxesWrap2">
+                    <!-- <div class="headBox">
+                        <span>Waiting</span>
+                        <div>
+                            2
+                        </div>
+                        <span>Waiting</span>
+                    </div> -->
 
+                </div>
 
             </div>
         </div>
         <div class="row">
-            <div class="lS_b">
+            <div style="background-color: #08143c;" class="lS_b  progressMainContainer>">
+                <div class="progressWrapp" id="progressWrapp">
 
-                <div class="volumeBoxWrap">
-                    <div class="volumeBox">
-                        
-                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="sm_b ctr" id="sale_and_profit"></div>
-            <div class="sm_b ctr" id="forecast_revenue_by_month"></div>
-            <div class="sm_b ctr" id="forecast_revenue_by_employee"></div>
-        </div>
-        <div class="row">
-            <div class="lS_b" id="Monthly_sales_by_year"></div>
-            <div class="lS_b" id="Win_loss_Rate"></div>
-            <div class="lS_b Top_5_sale_order" id="Top_5_sale_order">
-                <h2 style="font-size:1rem;margin-top: 0.5rem; ">Opportunities Summary Details</h2>
+            <div class=" workLoad" id="workLoad"></div>
+            <div class="MainTask" id="MainTask ">
+                <h2 style="color:white;font-size: 1rem;margin-top: 0.5rem ; ">Main Tasks Next Up</h2>
                 <div>
-                    <table>
+                    <table cellspacing="0" cellpadding="0">
                         <thead>
                             <tr>
-                                <th>Sales Order</th>
-                                <th>Account</th>
-                                <th>Amount</th>
-                                <th>Owner</th>
+                                <th>Project </th>
+                                <th>Task</th>
+                                <th>Risk</th>
+                                <th>Planned End Date</th>
+                                <th>Time Record</th>
+                                <th>Project Responsible</th>
+                                <th>Completion</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="tr_a">
+                            <tr>
                                 <td>Order 1</td>
                                 <td>ABC Corporation</td>
                                 <td>$230,00</td>
                                 <td>Prospecting</td>
+                                <td>Prospecting</td>
+                                <td>Prospecting</td>
+                                <td>Prospecting</td>
                             </tr>
-                            <tr>
+                            <tr class="tr_a">
                                 <td>Order 2</td>
                                 <td>XYZ Industries</td>
                                 <td>$20,000</td>
                                 <td>Negotiation</td>
+                                <td>Negotiation</td>
+                                <td>Negotiation</td>
+                                <td>Negotiation</td>
                             </tr>
-                            <tr class="tr_a">
+                            <tr>
                                 <td>Order 3</td>
                                 <td>LMN Enterprises</td>
                                 <td>$50,000</td>
                                 <td>Qualification</td>
+                                <td>Qualification</td>
+                                <td>Qualification</td>
+                                <td>Qualification</td>
                             </tr>
-                            <tr>
+                            <tr class="tr_a">
                                 <td>Order 4</td>
                                 <td>PQR Solutions</td>
                                 <td>$96,000</td>
                                 <td>Proposal</td>
+                                <td>Proposal</td>
+                                <td>Proposal</td>
+                                <td>Proposal</td>
+                            </tr>
+                            <tr>
+                                <td>Order 5</td>
+                                <td>XYZ Tech</td>
+                                <td>$90,000</td>
+                                <td>Closure</td>
+                                <td>Closure</td>
+                                <td>Closure</td>
+                                <td>Closure</td>
                             </tr>
                             <tr class="tr_a">
                                 <td>Order 5</td>
                                 <td>XYZ Tech</td>
                                 <td>$90,000</td>
                                 <td>Closure</td>
-                            </tr>
-                            <tr class="tr_b">
-                                <td>Order 5</td>
-                                <td>XYZ Tech</td>
-                                <td>$90,000</td>
+                                <td>Closure</td>
+                                <td>Closure</td>
                                 <td>Closure</td>
                             </tr>
-                            <tr class="tr_a">
-                                <td>Order 5</td>
-                                <td>XYZ Tech</td>
-                                <td>$90,000</td>
-                                <td>Closure</td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -105,9 +147,26 @@
             </div>
         </div>
         <div class="row">
-            <div class="sm_b ctr" id="sales_by_channel"></div>
-            <div class="sm_b ctr" id="top_5_companies_by_sale"></div>
+            <div class="serviceChart">
+                <div>
+                    <h3>Service Reminder</h3>
+                    <p>Due with in 30 days</p>
+                    <div class="serviceChartChild">
+                        <div>
+                            <span>Due for service</span>
+                            <h4>3<span>viehcle</span></h4>
+                        </div>
+                        <div>
+                            <span>Due for service</span>
+                            <h4>2<span>viehcle</span> </h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="serviceChart"></div>
+            </div>
+            <div class="dummy" id=""></div>
         </div>
+
         <br>
     </div>
 

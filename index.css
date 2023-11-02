@@ -1,14 +1,45 @@
 body {
-    margin: 0;
-    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.topBar {
+    display: flex;
+    flex: 1;
+}
+
+.topBar>div {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    /* border: 2px solid red; */
+    background-color: rgba(194, 194, 194, 0.24);
+    margin: 0.30rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.topBar>hr {
+    margin: 0.5rem;
+}
+
+.topBar>div span {
+    color: red;
+    font-size: 1.2rem;
+}
+
+.boxesMainContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0px;
 }
 
 .boxesWrap {
     display: flex;
     flex-direction: row;
-
+    font-family: Arial, Helvetica, sans-serif;
 
 }
+
 
 .headBox {
     margin: 0.5rem;
@@ -42,6 +73,7 @@ body {
     padding: 2px;
     background-color: white;
     font-size: 0.8rem;
+    text-transform: capitalize;
     font-weight: 600;
     border-bottom: 2px solid yellow;
 }
@@ -56,26 +88,210 @@ body {
 
 }
 
-
-.volumeBoxWrap {
+.progressMainContainer {
     display: flex;
     justify-content: space-around;
 }
-.volumeBox {
-    
-border: 1px solid red;
+
+.progressWrapp {
+    display: flex;
 }
+
+.progressBox {
+    flex: 1;
+    margin: 5px;
+    /* min-height: 150px; */
+    background: #3f4d6a;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.progressBoxHead {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+}
+
+.progressBoxHead div {
+    flex: 0.50;
+
+}
+
+.progressBoxHead div:nth-child(1) h3 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0px;
+}
+
+.progressBoxHead div:nth-child(1) span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #4ac8e5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.progressBoxHead div:nth-child(2) {
+    margin: auto 0px;
+    text-align: right;
+}
+
+.progressBoxHead div:nth-child(2) h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 100;
+    color: white;
+}
+
+.progressBoxHead div:nth-child(2) h6 {
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    margin: 0;
+    color: #a0a6b6;
+    margin-top: 0.5rem;
+
+}
+
+.progressBox>div:nth-child(2) progress {
+    width: 100%;
+    height: 20px;
+    border: none;
+}
+
+
+.progressBox>div:nth-child(2) progress::-webkit-progress-bar {
+    background-color: #a0a6b6;
+}
+
+.progressBox>div:nth-child(2) progress::-webkit-progress-value {
+    background-color: #4ac8e5;
+}
+
 
 
 
 .row {
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: center;
     flex-direction: row;
     margin: 0 50px;
     padding: 20px 0 0;
 }
+
+
+/* workLoad */
+
+.workLoad {
+    flex: 3;
+    margin: 5px 2px;
+    /* background-color: #3f4d6a; */
+    background-color: #fff;
+    color: #898989;
+    margin: 0 10px;
+    padding: 15px;
+    border: 1px solid #d7dde4;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+
+}
+
+.MainTask {
+    flex: 7;
+    margin: 5px 2px;
+    background-color: #fff;
+    margin: 0 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    background: #3f4d6a;
+}
+
+.MainTask>h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: black;
+}
+
+
+/* ServiceChart  */
+
+.serviceChart {
+    flex: 4;
+    margin: 5px 2px;
+    background-color: #fff;
+    color: #898989;
+    margin: 0 10px;
+    padding: 15px;
+    border: 1px solid #d7dde4;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+.serviceChart>div:nth-child(1) {
+    padding: 0 0.6rem;
+}
+
+.serviceChart h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+.serviceChart p {
+    margin-top: 0.2rem;
+}
+
+.serviceChartChild {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 0.5rem;
+    margin: 2rem 0rem 1rem 0rem;
+}
+
+.serviceChartChild h4 {
+    margin: 0rem;
+    padding: 0px;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.serviceChartChild span {
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.serviceChartChild>div:nth-child(1) {
+    /* border: 2px solid; */
+    flex: 5;
+}
+
+.serviceChartChild>div:nth-child(2) {
+    flex: 5;
+}
+
+.dummy {
+    flex: 6;
+    margin: 5px 2px;
+    background-color: #fff;
+    color: #898989;
+    margin: 0 10px;
+    padding: 15px;
+    border: 1px solid #d7dde4;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
 
 .b-60 {
     display: flex;
@@ -118,33 +334,44 @@ border: 1px solid red;
 
 
 /*Table styling  */
-.Top_5_sale_order div {
+/* .Top_5_sale_order div {
     max-height: 20rem;
     border: none;
     border: 1px solid;
     overflow: scroll;
-}
+} */
 
 table {
+    text-align: center;
     border-collapse: collapse;
     width: 100%;
-    border-radius: 0.4rem !important;
+    color: white;
+    font-weight: 600;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 th,
 td {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
     padding: 10px;
     font-size: 1rem;
+    border: none;
 }
 
 th {
-    background-color: #9aa7c9;
+    background-color: #596386;
     color: white;
 }
 
+td {
+
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
 .tr_a {
-    background-color: #eeeeee;
+    background-color: #596386;
+    color: white;
 }
