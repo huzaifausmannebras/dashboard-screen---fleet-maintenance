@@ -15,6 +15,7 @@ body {
     margin: 0.30rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 0.8rem;
 }
 
 .topBar>hr {
@@ -23,7 +24,7 @@ body {
 
 .topBar>div span {
     color: red;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .boxesMainContainer {
@@ -277,7 +278,7 @@ body {
     flex: 5;
 }
 
-.dummy {
+.schedularChart {
     flex: 6;
     margin: 5px 2px;
     background-color: #fff;
@@ -287,9 +288,123 @@ body {
     border: 1px solid #d7dde4;
     border-radius: 3px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    position: relative;
 }
 
 
+
+/* Dhx schedular styles */
+.add_event_button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: #ff5722;
+    border-radius: 50px;
+    bottom: 40px;
+    right: 55px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    z-index: 5;
+    cursor: pointer;
+}
+
+.add_event_button:after {
+    background: #000;
+    border-radius: 2px;
+    color: #FFF;
+    content: attr(data-tooltip);
+    margin: 16px 0 0 -137px;
+    opacity: 0;
+    padding: 4px 9px;
+    position: absolute;
+    visibility: visible;
+    font-family: "Roboto";
+    font-size: 14px;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+}
+
+.add_event_button:hover {
+    background: #ff774c;
+}
+
+.add_event_button:hover:after {
+    opacity: 0.55;
+    visibility: visible;
+}
+
+.add_event_button span:before {
+    content: "";
+    background: #fff;
+    height: 16px;
+    width: 2px;
+    position: absolute;
+    left: 26px;
+    top: 20px;
+}
+
+.add_event_button span:after {
+    content: "";
+    height: 2px;
+    width: 16px;
+    background: #fff;
+    position: absolute;
+    left: 19px;
+    top: 27px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .add_event_button {
+        bottom: 5vw;
+        right: 5vw;
+    }
+}
+.dhx_cal_header {
+    /* border: 2px solid red;
+    right: 20px !important; */
+
+}
+.dhx_timeline_second_scale {
+/* border: 2px solid green;
+width: 100px !important; */
+}
+.dhx_cal_event.multisection div{
+    background-color: inherit;
+}
+.dhx_timeline_data_wrapper{
+
+    /* padding-left: 120px !important; */
+}
+.dhx_timeline_label_wrapper {
+    /* width: 120px !important; */
+    /* border: 2px solid ; */
+}
+.dhx_timeline_data_row   {
+    width: 100% !important;
+
+}
+.dhx_matrix_scell {
+    /* width: 120px !important;
+    height: 120px !important; */
+    /* border: 2px solid  red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.section_1{
+    background-color: #684f8c !important;
+}
+.section_2{
+    background-color: #0FC4A7 !important;
+}
+.section_3{
+    background-color: #FF5722 !important;
+}
+.section_4{
+    background-color: #6e7dc5 !important;
+}
+
+/* DHX style ends   */
 
 
 
@@ -332,14 +447,6 @@ body {
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
-
-/*Table styling  */
-/* .Top_5_sale_order div {
-    max-height: 20rem;
-    border: none;
-    border: 1px solid;
-    overflow: scroll;
-} */
 
 table {
     text-align: center;
